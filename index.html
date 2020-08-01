@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio player HTML5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
+    <style>
+
+    #player{
+        position: relative;
+        max-width: 500px;
+        right: 0;
+        bottom: 0;
+        left: 500px;
+        height: 500px;
+        top:200px;
+        border: solid 1px green;
+        border-radius: 25px;
+    }
+    </style>
+  </head>
+
+  <body>
+      <!-- Audio player container-->
+     <div id='player'></div>
+
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+
+        AP.init({
+            container:'#player',
+            volume   : 0.7,
+            autoPlay : true,
+            notification: false,
+            playList: [
+                {'icon': iconImage, 'title': 'Fire Fire', 'file': 'mp3/Rudeboy-Fire-Fire.mp3', 'artist': 'Rudeboy'},
+                {'icon': iconImage, 'title': 'Balance', 'file': 'mp3/Timaya-Balance-Official-Audio.mp3', 'artist': 'Timaya'},
+                {'icon': iconImage, 'title': 'Right Now', 'file': 'mp3/01-Akon-Right-Now.mp3', 'artist': 'Akon'},
+                {'icon': iconImage, 'title': 'UP WITH HOPE', 'file': 'mp3/UP-WITH-HOPE.MP3', 'artist': 'Lucky Dube'},
+                {'icon': iconImage, 'title': 'You', 'file': 'mp3/Omah-Lay-You.mp3', 'artist': 'Omah Lay'}
+          ]
+        });
+    </script>
+    <!-- Audio player js end-->
+
+  </body>
+</html>
